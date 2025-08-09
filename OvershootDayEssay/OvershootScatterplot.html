@@ -1,0 +1,164 @@
+
+
+  <div
+    style="
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      height: 100%;
+      user-select: none;
+    "
+  >
+    <div
+      id="0f3388a4-86ee-4343-df82-225c49611890"
+      style="
+        font-family: 'Inter', sans-serif;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      "
+    ></div>
+  </div>
+  <script
+    src="https://www.graphica.app/graphicajs/papaparse.min.js"
+    type="text/javascript"
+  ></script>
+  <script
+    src="https://www.graphica.app/graphicajs/Mexp.js"
+    type="text/javascript"
+  ></script>
+  <script type="text/javascript">
+    const mexp = new Mexp();
+  </script>
+  <script
+    src="https://www.graphica.app/graphicajs/graphica.1.0.51.js"
+    type="text/javascript"
+  ></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    rel="preload"
+    as="style"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+    rel="stylesheet"
+  />
+  <script type="text/javascript">
+    main(function () {
+      var settings = {
+        general: {
+          default_shape: "filled disk",
+          label_config: "",
+          tooltip_config:
+            '<strong style="font-size: large;">[Country]</strong><br/><br/><strong style="font-size: small;">Number of Earths required: </strong><span style="font-size: small;">[Number of Earths required] Earths</span><br/><strong style="font-size: small;">Total Ecological Consumption:</strong><span style="font-size: small;"> [Total Ecological Footprint (Consumption)] Global Hectares per Person</span><br/><strong style="font-size: small;">Ecological Deficit or Reserve: </strong><span style="font-size: small;">[Ecological (Deficit) or Reserve] Global Hectares per Person</span><br/><strong style="font-size: small;">Biocapacity: </strong><span style="font-size: small;">[Total biocapacity] Global Hectares per Person</span><br/><strong style="font-size: small;">Country Overshoot Day: </strong><span style="font-size: small;">[Country Overshoot Day ]</span>',
+          layout: "avoid overlapping",
+          default_border_width: 1,
+          default_border_color: "#474747",
+          highlight_on_hover: false,
+          transparent_background: true,
+          reference_lines: "none",
+          filter_alpha: 0.41,
+          distribution_plot: "none",
+          distribution_plot_in_front: true,
+          floating_legend: false,
+        },
+        grammar: [
+          {
+            variable: "Ecological (Deficit) or Reserve",
+            property: "AXIS_Y",
+            show_zero_line: true,
+            grid_lines_type: "2,2",
+            grid_lines_color: "#000000",
+            show_line: false,
+            show_ticks: false,
+            orientation: "left",
+            interaction: "none",
+            reversed: false,
+            aggregation: "sum",
+            label:
+              '<strong style="font-size: small;">Ecological Deficit or Reserve</strong><br/><sub style="font-size: small;">(Global Hectares per Person)</sub>',
+            label_align: "left",
+            label_size: 12,
+          },
+          {
+            variable: "Country Overshoot Day ",
+            property: "AXIS_X",
+            label:
+              '<strong style="font-size: small;">2024 Country Overshoot Dates</strong>',
+            label_align: "left",
+            dates_to_label: "auto",
+            label_date_format: "month",
+            labels_align: "center",
+            labels_size: 10,
+            aggregation: "",
+            labels_vertical_align: "bottom",
+            show_line: false,
+            show_ticks: false,
+            grid_lines_type: "solid",
+            min_date: "2024-01-01",
+            max_date: "2024-12-31",
+          },
+          {
+            variable: "Population (millions)",
+            property: "AREA",
+            min: 5,
+            range: "uniform",
+            aggregation: "sum",
+            minimum_fraction_digits: 0,
+            label: "Country Population",
+          },
+          {
+            variable: "Ecological (Deficit) or Reserve",
+            property: "COLOR",
+            aggregation: "sum",
+            stepped_color: false,
+            color_scheme: "diverging",
+            min: "#ff0000",
+            max: "#46c700",
+            middle: "#d7e660",
+            middle_value: "zero",
+            legend: true,
+            max_value: 100,
+            min_value: -20,
+          },
+          { variable: "Country", property: "TOOLTIP" },
+          { variable: "Ecological (Deficit) or Reserve", property: "TOOLTIP" },
+          { variable: "Number of Earths required", property: "TOOLTIP" },
+          { variable: "Total biocapacity", property: "TOOLTIP" },
+          {
+            variable: "Total Ecological Footprint (Consumption)",
+            property: "TOOLTIP",
+          },
+          { variable: "Country Overshoot Day ", property: "TOOLTIP" },
+          { variable: "Country", property: "UNIT" },
+        ],
+      };
+      var data =
+        'Country;Population (millions);Total Ecological Footprint (Consumption);Total biocapacity;Ecological (Deficit) or Reserve;Number of Earths required;Country Overshoot Day \n"";;;;;;\n"Algeria";45.4;2.2;0.7;-1.6;1.5;"Wed, 04 Sep 2024 00:00:00 GMT"\n"Angola";35;0.9;1.6;0.7;0.6;\n"Benin";12.8;1.1;0.6;-0.5;0.7;\n"Botswana";2.4;2.2;2.9;0.7;1.5;"Thu, 05 Sep 2024 00:00:00 GMT"\n"Burkina Faso";22.1;0.9;0.7;-0.2;0.6;\n"Burundi";12.6;0.6;0.4;-0.2;0.4;\n"CAPE VERDE";0.6;1.2;0.4;-0.7;0.8;\n"Cameroon";27.9;1;1.4;0.4;0.7;\n"Central African Republic";5;1.1;6.4;5.3;0.7;\n"Chad";17.4;1.4;1.4;0.1;0.9;\n"Comoros";0.9;2;0.3;-1.7;1.3;"Fri, 04 Oct 2024 00:00:00 GMT"\n"Congo";5.8;1.1;7.8;6.7;0.7;\n"Congo";95.2;0.7;1.8;1.2;0.5;\n"Côte d\'Ivoire";27.7;0.9;1.1;0.2;0.6;\n"Djibouti";1;2.5;0.6;-1.8;1.6;"Mon, 12 Aug 2024 00:00:00 GMT"\n"Egypt";106.2;1.5;0.3;-1.1;1;\n"Equatorial Guinea";1.5;1.8;2.7;0.8;1.2;"Mon, 28 Oct 2024 00:00:00 GMT"\n"Eritrea";3.7;0.7;1.9;1.2;0.5;\n"Eswatini";1.2;2.9;1.4;-1.5;1.9;"Tue, 09 Jul 2024 00:00:00 GMT"\n"Ethiopia";120.8;0.8;0.4;-0.4;0.6;\n"Gabon";2.3;2.1;16.9;14.9;1.4;"Tue, 24 Sep 2024 00:00:00 GMT"\n"Gambia";2.6;0.9;0.5;-0.4;0.6;\n"Ghana";32.4;1.8;0.9;-0.8;1.2;"Sun, 10 Nov 2024 00:00:00 GMT"\n"Guinea";13.9;1.5;1.7;0.2;1;"Fri, 27 Dec 2024 00:00:00 GMT"\n"Guinea-Bissau";2.1;1.2;2.2;1;0.8;\n"Kenya";56.2;0.9;0.5;-0.4;0.6;\n"Lesotho";2.2;1.2;0.7;-0.4;0.8;\n"Liberia";5.3;1.2;2.7;1.5;0.8;\n"Madagascar";29.2;0.8;2;1.2;0.5;\n"Malawi";20.2;0.7;0.6;-0.1;0.5;\n"Mali";21.5;1;1.4;0.4;0.7;\n"Mauritania";4.9;2.3;3.7;1.4;1.5;"Sun, 01 Sep 2024 00:00:00 GMT"\n"Mauritius";1.3;2.6;0.7;-1.9;1.7;"Tue, 30 Jul 2024 00:00:00 GMT"\n"Morocco";37.8;1.5;0.6;-1;1;"Sun, 22 Dec 2024 00:00:00 GMT"\n"Mozambique";33.1;0.8;1.4;0.6;0.5;\n"Namibia";2.6;2.4;6.1;3.7;1.6;"Mon, 19 Aug 2024 00:00:00 GMT"\n"Niger";26.1;1.4;1.1;-0.3;0.9;\n"Nigeria";216.7;0.8;0.4;-0.4;0.5;\n"Réunion";0.9;3.5;0.1;-3.4;2.3;"Thu, 06 Jun 2024 00:00:00 GMT"\n"Rwanda";13.6;0.6;0.2;-0.3;0.4;\n"Sao Tome and Principe";0.2;1.1;0.7;-0.4;0.7;\n"Senegal";17.7;1.2;1;-0.2;0.8;\n"Sierra Leone";8.3;1;0.9;-0.1;0.7;\n"Somalia";16.8;0.9;0.7;-0.2;0.6;\n"South Africa";60.8;3.2;1.3;-1.9;2.1;"Thu, 20 Jun 2024 00:00:00 GMT"\n"South Sudan";11.6;1.7;1.8;0.1;1.1;"Tue, 26 Nov 2024 00:00:00 GMT"\n"Sudan";46;1.1;1.1;0;0.8;\n"Tanzania";63.3;0.9;0.8;-0.1;0.6;\n"Togo";8.7;0.9;0.6;-0.3;0.6;\n"Tunisia";12;1.4;0.7;-0.6;0.9;\n"Uganda";48.4;1;0.5;-0.5;0.6;\n"Zambia";19.5;1.2;1.7;0.4;0.8;\n"Zimbabwe";15.3;1.1;0.6;-0.5;0.7;\n"Australia";26.1;5.8;11;5.2;3.8;"Fri, 05 Apr 2024 00:00:00 GMT"\n"Bangladesh";167.9;0.7;0.2;-0.4;0.4;\n"Bhutan";0.8;4.7;4.9;0.2;3.1;"Fri, 26 Apr 2024 00:00:00 GMT"\n"Brunei Darussalam";0.4;7.9;2.6;-5.3;5.2;"Sun, 10 Mar 2024 00:00:00 GMT"\n"Cambodia";17.2;1.3;1;-0.3;0.9;\n"China";1480.6;3.6;0.8;-2.8;2.4;"Sat, 01 Jun 2024 00:00:00 GMT"\n"Fiji";0.9;2.8;2.7;-0.1;1.9;"Sun, 14 Jul 2024 00:00:00 GMT"\n"French Polynesia";0.3;3.7;1.1;-2.6;2.5;"Tue, 28 May 2024 00:00:00 GMT"\n"India";1406.6;1;0.3;-0.7;0.7;\n"Indonesia";279.1;1.7;1.2;-0.5;1.1;"Sun, 24 Nov 2024 00:00:00 GMT"\n"Japan";125.6;4;0.6;-3.4;2.7;"Thu, 16 May 2024 00:00:00 GMT"\n"NORTH KOREA";26;1.2;0.5;-0.7;0.8;\n"SOUTH KOREA";51.3;5.8;0.6;-5.2;3.9;"Thu, 04 Apr 2024 00:00:00 GMT"\n"LAOS";7.5;1.9;1.6;-0.2;1.2;"Wed, 23 Oct 2024 00:00:00 GMT"\n"Malaysia";33.2;4.2;2.1;-2.2;2.8;"Thu, 09 May 2024 00:00:00 GMT"\n"Mongolia";3.4;7.7;13.5;5.8;5.1;"Tue, 12 Mar 2024 00:00:00 GMT"\n"Myanmar";55.2;1.1;1.4;0.2;0.7;\n"Nepal";30.2;0.9;0.4;-0.5;0.6;\n"New Zealand";4.9;5.4;8.4;3;3.6;"Thu, 11 Apr 2024 00:00:00 GMT"\n"Pakistan";229.5;0.7;0.4;-0.4;0.5;\n"Papua New Guinea";9.3;1.2;2.9;1.7;0.8;\n"Philippines";112.5;1.2;0.4;-0.8;0.8;\n"Samoa";0.2;2.5;1.7;-0.8;1.6;"Fri, 09 Aug 2024 00:00:00 GMT"\n"Singapore";5.9;5.7;0.1;-5.6;3.8;"Sat, 06 Apr 2024 00:00:00 GMT"\n"Solomon Islands";0.7;1.7;3.3;1.7;1.1;"Wed, 27 Nov 2024 00:00:00 GMT"\n"Thailand";70.1;2.3;1.1;-1.2;1.6;"Fri, 23 Aug 2024 00:00:00 GMT"\n"Timor-Leste";1.4;0.6;1.6;1;0.4;\n"Tonga";0.1;3.1;1.3;-1.8;2;"Thu, 27 Jun 2024 00:00:00 GMT"\n"Vanuatu";0.3;1.8;1.8;0;1.2;"Mon, 28 Oct 2024 00:00:00 GMT"\n"Viet Nam";99;2.4;0.8;-1.6;1.6;"Wed, 14 Aug 2024 00:00:00 GMT"\n"Antigua and Barbuda";0.1;2.9;0.9;-2;1.9;"Sat, 06 Jul 2024 00:00:00 GMT"\n"Barbados";0.3;3.3;0.3;-3.1;2.2;"Sat, 15 Jun 2024 00:00:00 GMT"\n"Belize";0.4;7.5;3.3;-4.2;5;"Thu, 14 Mar 2024 00:00:00 GMT"\n"Costa Rica";5.2;2.6;1.6;-1;1.7;"Wed, 31 Jul 2024 00:00:00 GMT"\n"Cuba";11.3;1.9;1.1;-0.8;1.3;"Mon, 14 Oct 2024 00:00:00 GMT"\n"Dominica";0.1;2.7;1;-1.7;1.8;"Wed, 24 Jul 2024 00:00:00 GMT"\n"Dominican Republic";11.1;1.8;0.7;-1.1;1.2;"Fri, 01 Nov 2024 00:00:00 GMT"\n"El Salvador";6.6;2;0.6;-1.3;1.3;"Wed, 09 Oct 2024 00:00:00 GMT"\n"Grenada";0.1;1.8;1.6;-0.2;1.2;"Wed, 06 Nov 2024 00:00:00 GMT"\n"Guadeloupe";0.4;3.4;0.6;-2.9;2.3;"Mon, 10 Jun 2024 00:00:00 GMT"\n"Guatemala";18.6;1.9;1;-0.9;1.3;"Fri, 18 Oct 2024 00:00:00 GMT"\n"Haiti";11.7;0.6;0.2;-0.4;0.4;\n"Honduras";10.2;1.3;1.7;0.3;0.9;\n"Jamaica";3;1.7;0.6;-1.2;1.2;"Tue, 12 Nov 2024 00:00:00 GMT"\n"Martinique";0.4;3.5;0.5;-3;2.3;"Thu, 06 Jun 2024 00:00:00 GMT"\n"Nicaragua";6.8;1.5;2.3;0.8;1;\n"Panama";4.4;2.3;2.6;0.3;1.5;"Sun, 25 Aug 2024 00:00:00 GMT"\n"Saint Lucia";0.2;1.7;0.4;-1.3;1.1;"Mon, 18 Nov 2024 00:00:00 GMT"\n"Saint Vincent and Grenadines";0.1;1.8;1.2;-0.7;1.2;"Wed, 30 Oct 2024 00:00:00 GMT"\n"Trinidad and Tobago";1.4;5.4;1.4;-4;3.6;"Fri, 12 Apr 2024 00:00:00 GMT"\n"Austria";9.1;5.6;2.9;-2.7;3.7;"Sun, 07 Apr 2024 00:00:00 GMT"\n"Belgium";11.7;6.7;1.2;-5.5;4.4;"Sat, 23 Mar 2024 00:00:00 GMT"\n"Bulgaria";6.8;3.6;3.1;-0.5;2.4;"Sun, 02 Jun 2024 00:00:00 GMT"\n"Cyprus";1.2;3.2;0.4;-2.8;2.1;"Fri, 21 Jun 2024 00:00:00 GMT"\n"Czech Republic";10.7;5.1;2.5;-2.6;3.4;"Thu, 18 Apr 2024 00:00:00 GMT"\n"Denmark";5.8;7.3;4.2;-3.1;4.8;"Sat, 16 Mar 2024 00:00:00 GMT"\n"Estonia";1.3;8.1;9.8;1.7;5.4;"Fri, 08 Mar 2024 00:00:00 GMT"\n"Finland";5.6;5.4;11.8;6.4;3.6;"Fri, 12 Apr 2024 00:00:00 GMT"\n"France";65.6;4.3;2.5;-1.9;2.9;"Tue, 07 May 2024 00:00:00 GMT"\n"Germany";83.9;4.5;1.6;-2.9;3;"Thu, 02 May 2024 00:00:00 GMT"\n"Greece";10.3;3.8;1.6;-2.2;2.5;"Sat, 25 May 2024 00:00:00 GMT"\n"Hungary";9.6;3.8;2.6;-1.2;2.5;"Sat, 25 May 2024 00:00:00 GMT"\n"Ireland";5;4.5;3.1;-1.4;3;"Thu, 02 May 2024 00:00:00 GMT"\n"Italy";60.3;4;1;-3;2.6;"Sun, 19 May 2024 00:00:00 GMT"\n"Latvia";1.8;7.7;9.9;2.2;5.1;"Tue, 12 Mar 2024 00:00:00 GMT"\n"Lithuania";2.7;6.4;6;-0.5;4.3;"Tue, 26 Mar 2024 00:00:00 GMT"\n"Luxembourg";0.6;11;1.2;-9.7;7.3;"Tue, 20 Feb 2024 00:00:00 GMT"\n"Malta";0.4;3.7;0.5;-3.3;2.5;"Tue, 28 May 2024 00:00:00 GMT"\n"Netherlands";17.2;6;1.1;-4.9;4;"Mon, 01 Apr 2024 00:00:00 GMT"\n"Poland";37.7;4.6;2;-2.6;3.1;"Sun, 28 Apr 2024 00:00:00 GMT"\n"Portugal";10.1;3.7;1.5;-2.2;2.5;"Tue, 28 May 2024 00:00:00 GMT"\n"Romania";19;2.7;2.5;-0.3;1.8;"Sat, 20 Jul 2024 00:00:00 GMT"\n"Slovakia";5.5;4.2;2.7;-1.5;2.8;"Sun, 12 May 2024 00:00:00 GMT"\n"Slovenia";2.1;4.8;2.5;-2.3;3.2;"Thu, 25 Apr 2024 00:00:00 GMT"\n"Spain";46.7;3.9;1.7;-2.2;2.6;"Mon, 20 May 2024 00:00:00 GMT"\n"Sweden";10.2;4.9;8.5;3.6;3.3;"Sun, 21 Apr 2024 00:00:00 GMT"\n"Afghanistan";40.8;0.8;0.5;-0.3;0.5;\n"Armenia";3;2.3;0.8;-1.5;1.5;"Sat, 24 Aug 2024 00:00:00 GMT"\n"Azerbaijan";10.3;2.4;0.9;-1.4;1.6;"Wed, 21 Aug 2024 00:00:00 GMT"\n"Bahrain";1.8;8.2;0.6;-7.6;5.4;"Fri, 08 Mar 2024 00:00:00 GMT"\n"Georgia";4;2.7;1.4;-1.3;1.8;"Fri, 26 Jul 2024 00:00:00 GMT"\n"IRAN";86;3.2;0.8;-2.5;2.2;"Tue, 18 Jun 2024 00:00:00 GMT"\n"Iraq";42.2;1.7;0.3;-1.4;1.1;"Fri, 15 Nov 2024 00:00:00 GMT"\n"Israel";8.9;4.2;0.2;-3.9;2.8;"Sun, 12 May 2024 00:00:00 GMT"\n"Jordan";10.3;1.3;0.2;-1.1;0.9;\n"Kazakhstan";19.2;4.3;3.8;-0.5;2.8;"Wed, 08 May 2024 00:00:00 GMT"\n"Kuwait";4.4;8.6;0.8;-7.7;5.7;"Tue, 05 Mar 2024 00:00:00 GMT"\n"Kyrgyzstan";6.7;1.5;1.3;-0.3;1;"Mon, 30 Dec 2024 00:00:00 GMT"\n"Lebanon";6.7;3.1;0.3;-2.8;2.1;"Mon, 24 Jun 2024 00:00:00 GMT"\n"Oman";5.3;7.3;1.8;-5.5;4.8;"Sat, 16 Mar 2024 00:00:00 GMT"\n"Qatar";3;13.1;1;-12.1;8.7;"Sun, 11 Feb 2024 00:00:00 GMT"\n"Saudi Arabia";35.8;5.7;0.7;-5;3.8;"Fri, 05 Apr 2024 00:00:00 GMT"\n"Syrian Arab Republic";19.4;1;0.6;-0.4;0.7;\n"Tajikistan";10;1.1;0.4;-0.6;0.7;\n"TURKEY";85.6;3.4;1.5;-1.9;2.2;"Tue, 11 Jun 2024 00:00:00 GMT"\n"Turkmenistan";6.2;3.9;2.2;-1.7;2.6;"Wed, 22 May 2024 00:00:00 GMT"\n"United Arab Emirates";10.1;8.7;0.5;-8.2;5.8;"Mon, 04 Mar 2024 00:00:00 GMT"\n"Uzbekistan";34.4;2.1;0.7;-1.4;1.4;"Wed, 18 Sep 2024 00:00:00 GMT"\n"Yemen";31.2;0.6;0.3;-0.3;0.4;\n"Bermuda";0.1;;;;;\n"Canada";38.4;7.4;14.2;6.8;4.9;"Fri, 15 Mar 2024 00:00:00 GMT"\n"Mexico";131.6;2.3;1.2;-1.1;1.5;"Thu, 29 Aug 2024 00:00:00 GMT"\n"United States of America";334.8;7.5;3.7;-3.7;4.9;"Thu, 14 Mar 2024 00:00:00 GMT"\n"Albania";2.9;2.1;1.2;-0.9;1.4;"Mon, 23 Sep 2024 00:00:00 GMT"\n"Belarus";9.4;4.6;3.7;-0.9;3;"Tue, 30 Apr 2024 00:00:00 GMT"\n"Bosnia and Herzegovina";3.2;4.3;2.2;-2.1;2.8;"Thu, 09 May 2024 00:00:00 GMT"\n"Croatia";4.1;3.7;2.6;-1.1;2.5;"Tue, 28 May 2024 00:00:00 GMT"\n"Montenegro";0.6;3.7;2.8;-0.8;2.4;"Thu, 30 May 2024 00:00:00 GMT"\n"Norway";5.5;5.4;6.7;1.3;3.6;"Fri, 12 Apr 2024 00:00:00 GMT"\n"MOLDOVA";4;1.5;1;-0.5;1;"Sat, 28 Dec 2024 00:00:00 GMT"\n"MACEDONIA";2.1;2.8;1.6;-1.3;1.9;"Sun, 14 Jul 2024 00:00:00 GMT"\n"Russian Federation";145.8;5.8;7.7;1.9;3.8;"Fri, 05 Apr 2024 00:00:00 GMT"\n"Serbia";8.7;3.8;2.1;-1.8;2.5;"Thu, 23 May 2024 00:00:00 GMT"\n"Switzerland";8.8;3.7;1.1;-2.6;2.5;"Mon, 27 May 2024 00:00:00 GMT"\n"Ukraine";43.2;2;3.1;1.1;1.3;"Mon, 30 Sep 2024 00:00:00 GMT"\n"United Kingdom";68.5;3.6;1;-2.5;2.4;"Mon, 03 Jun 2024 00:00:00 GMT"\n"Argentina";46;3.2;5.2;2;2.1;"Thu, 20 Jun 2024 00:00:00 GMT"\n"Bolivia";12;2.8;13.2;10.5;1.8;"Wed, 17 Jul 2024 00:00:00 GMT"\n"Brazil";215.4;2.6;8.2;5.6;1.7;"Sun, 04 Aug 2024 00:00:00 GMT"\n"Chile";19.3;3.8;3.2;-0.6;2.5;"Thu, 23 May 2024 00:00:00 GMT"\n"Colombia";51.5;2;3.6;1.6;1.3;"Sat, 05 Oct 2024 00:00:00 GMT"\n"Ecuador";18.1;1.7;1.9;0.2;1.1;"Sun, 24 Nov 2024 00:00:00 GMT"\n"French Guiana";0.3;1.5;85.6;84.1;1;"Sun, 22 Dec 2024 00:00:00 GMT"\n"Guyana";0.8;3.3;70.5;67.2;2.2;"Sat, 15 Jun 2024 00:00:00 GMT"\n"Paraguay";7.3;3.2;9.6;6.5;2.1;"Sun, 23 Jun 2024 00:00:00 GMT"\n"Peru";33.7;2.2;3.5;1.3;1.5;"Tue, 03 Sep 2024 00:00:00 GMT"\n"Suriname";0.6;3.1;74.8;71.7;2.1;"Mon, 24 Jun 2024 00:00:00 GMT"\n"Uruguay";3.5;2.2;9.6;7.4;1.4;"Wed, 11 Sep 2024 00:00:00 GMT"\n"VENEZUELA";29.3;2.1;2.9;0.8;1.4;"Wed, 18 Sep 2024 00:00:00 GMT"\n';
+      var ds = new graphica.Dataset({
+        data: data,
+        datatypes: {
+          Country: "geo.country",
+          "Population (millions)": "number",
+          "Total Ecological Footprint (Consumption)": "number",
+          "Total biocapacity": "number",
+          "Ecological (Deficit) or Reserve": "number",
+          "Number of Earths required": "number",
+          "Country Overshoot Day ": "date",
+        },
+        compute: [],
+      }).done(function () {
+        new graphica.Chart(this).add(
+          "0f3388a4-86ee-4343-df82-225c49611890",
+          settings
+        );
+      });
+    });
+  </script>
+</body>

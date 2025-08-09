@@ -1,0 +1,48 @@
+/* fonts & site theme & responsivity */
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  font-family: "Public Sans", sans-serif !important;
+}
+
+html {
+  background-image: linear-gradient(#cceff1, #a0e9d3);
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding-top: 100px;
+}
+
+/* responsivity */
+@media only screen and (min-width: 601px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .border {
+    aspect-ratio: 4/3;
+  }
+
+  .text-container p,
+  .text-container-grid p {
+    display: contents;
+  }
+}
+
+@media only screen and (min-width: 1041px) {
+  header div p {
+    font-size: 12px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1601px) {
+  .border {
+    aspect-ratio: 3/2;
+  }
+}

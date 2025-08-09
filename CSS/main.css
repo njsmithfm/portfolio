@@ -1,0 +1,143 @@
+/* main content */
+main {
+  width: 100%;
+  padding: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero-container {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  border: 5px solid rgb(0, 0, 0);
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+
+.hero {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.hero-container:hover .hero {
+  transform: scale(1.05);
+}
+
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.border {
+  border: 5px solid rgb(0, 0, 0);
+  overflow: hidden;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+}
+
+.border img,
+.img-scale img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.border:hover img,
+.img-scale:hover img {
+  transform: scale(1.15);
+}
+
+.img-scale {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.text-container,
+.text-container-grid {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 105, 180, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  filter: drop-shadow(8px 8px 10px black);
+}
+
+.text-container {
+  font-size: 48px;
+}
+
+.text-container-grid {
+  font-size: 24px;
+}
+
+.text-container a,
+.text-container-grid a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  filter: drop-shadow(8px 8px 10px black);
+  padding: 20px;
+}
+
+.text-container-grid a {
+  padding: 5px;
+}
+
+.text-container p,
+.text-container-grid p {
+  display: none;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  filter: drop-shadow(8px 8px 10px black);
+  margin: 0;
+}
+
+.text-container p {
+  padding: 20px;
+}
+
+.text-container-grid p {
+  padding: 0;
+}
+
+.hero-container:hover .text-container,
+.img-scale:hover .text-container,
+.img-scale:hover .text-container-grid {
+  opacity: 1;
+}
