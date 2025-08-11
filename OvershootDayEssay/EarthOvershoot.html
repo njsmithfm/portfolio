@@ -1,106 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Earth Overshoot Day 2024</title>
-    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://unpkg.com/intersection-observer"></script>
-    <script src="https://unpkg.com/scrollama"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earth Overshoot Day 2024</title>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <nav>
-      <h3 id="navTitle">Earth Overshoot Day 2024</h3>
-    </nav>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://unpkg.com/intersection-observer"></script>
+  <script src="https://unpkg.com/scrollama"></script>
+</head>
 
-    <div class="header title step" id="mainTitle">
-      <div class="aligner">
-        <h1>What Is <span class="gradient-text">Earth Overshoot Day?</span></h1>
-      </div>
+<body>
+  <nav>
+    <h3 id="navTitle">Earth Overshoot Day 2024</h3>
+  </nav>
+
+  <div class="header title step" id="mainTitle">
+    <div class="aligner">
+      <h1>What Is <span class="gradient-text">Earth Overshoot Day?</span></h1>
     </div>
+  </div>
 
-    <div class="text">
-      <h2>Another of Life's Burning Questions, Answered By NJ Smith</h2>
+  <div class="text">
+    <h2>Another of Life's Burning Questions, Answered By NJ Smith</h2>
+  </div>
+
+  <div class="text">
+    <h1>
+      "Overshoot Day" is the date each year on which the demand for ecological
+      resources surpasses Earth's ability to generate those resources in that
+      year.
+    </h1>
+    <p>
+      "Earth Overshoot Day" is a joint initiative by the Global Footprint
+      Network, York University, and Footprint Data Foundation. It addresses
+      the question of
+      <i>"how do we model patterns of behavior, country by country, for
+        renewable resources?"</i>
+      Perhaps the key deliverable from the project is the concept of
+      "Overshoot Day," which is a calculation of the date in each calendar
+      year in which the demand for renewable resources surpasses Earth's
+      ability to renew those resources within the year.
+    </p>
+
+    <p>
+      The data published through this research's
+      <a href="https://data.footprintnetwork.org/#/abouttheData" target="_blank">open data platform</a>
+      yields several interesting metrics, both for planet Earth as well as
+      individual countries. For example, let us explore the following map--it
+      indicates, country by country, the amount of Earths it would take to
+      meet the consumption demands on natural resources if everyone across the
+      planet consumed resources as the country in question does. The United
+      States requires 4.9 Earths, which means that if all countries consumed
+      resources at the rate that Americans do, it would require 4.9 Earths to
+      meet the demand within a calendar year.
+    </p>
+  </div>
+
+  <div class="text">
+    <p>
+      This map visualizes national consumption levels by indicating how many
+      Earths would be necessary if everyone globally consumed like the
+      citizens in each respective country. What can these comparisons suggest
+      about global lifestyles and our differing footprints?
+    </p>
+  </div>
+
+  <div class="center_aligner">
+    <div class="embed-block">
+      <iframe title="Earths Required To Meet Country Consumption" aria-label="map" id="datawrapper-chart-r6tx9"
+        src="https://datawrapper.dwcdn.net/r6tx9/2/" scrolling="no" data-external="1">
+      </iframe>
     </div>
+  </div>
 
-    <div class="text">
-      <h1>
-        "Overshoot Day" is the date each year on which the demand for ecological
-        resources surpasses Earth's ability to generate those resources in that
-        year.
-      </h1>
-      <p>
-        "Earth Overshoot Day" is a joint initiative by the Global Footprint
-        Network, York University, and Footprint Data Foundation. It addresses
-        the question of
-        <i
-          >"how do we model patterns of behavior, country by country, for
-          renewable resources?"</i
-        >
-        Perhaps the key deliverable from the project is the concept of
-        "Overshoot Day," which is a calculation of the date in each calendar
-        year in which the demand for renewable resources surpasses Earth's
-        ability to renew those resources within the year.
-      </p>
-
-      <p>
-        The data published through this research's
-        <a
-          href="https://data.footprintnetwork.org/#/abouttheData"
-          target="_blank"
-          >open data platform</a
-        >
-        yields several interesting metrics, both for planet Earth as well as
-        individual countries. For example, let us explore the following map--it
-        indicates, country by country, the amount of Earths it would take to
-        meet the consumption demands on natural resources if everyone across the
-        planet consumed resources as the country in question does. The United
-        States requires 4.9 Earths, which means that if all countries consumed
-        resources at the rate that Americans do, it would require 4.9 Earths to
-        meet the demand within a calendar year.
-      </p>
+  <div class="center_aligner">
+    <div class="embed-block">
+      <img src="images/bubblechart(1)(1).svg"
+        alt="scatterplot of country biocapacity, overshoot dates, and earths required for each" />
     </div>
-
-    <div class="text">
-      <p>
-        This map visualizes national consumption levels by indicating how many
-        Earths would be necessary if everyone globally consumed like the
-        citizens in each respective country. What can these comparisons suggest
-        about global lifestyles and our differing footprints?
-      </p>
-    </div>
-
-    <div class="center_aligner">
-      <div class="embed-block">
-        <iframe
-          title="Earths Required To Meet Country Consumption"
-          aria-label="map"
-          id="datawrapper-chart-r6tx9"
-          src="https://datawrapper.dwcdn.net/r6tx9/2/"
-          scrolling="no"
-          data-external="1"
-        >
-        </iframe>
-      </div>
-    </div>
-
-    <div class="center_aligner">
-      <div class="embed-block">
-        <img
-          src="images/bubblechart(1)(1).svg"
-          alt="scatterplot of country biocapacity, overshoot dates, and earths required for each"
-        />
-      </div>
-    </div>
-    <!-- 
+  </div>
+  <!-- 
     <div class="text">
       <p>
         Here, we compare the
@@ -113,7 +98,7 @@
       </p>
     </div> -->
 
-    <!-- <div class="center_aligner">
+  <!-- <div class="center_aligner">
       <div class="embed-block">
         <div class="tableauPlaceholder" id="viz1754056833444">
           <noscript>
@@ -152,134 +137,117 @@
       </div>
     </div> -->
 
-    <div class="text">
-      <h2>Country-Level Overshoot Patterns</h2>
-      <p>
-        This scatterplot reveals the relationship between a country's
-        biocapacity and ecological footprint, plotted according to each
-        country's Overshoot Day in 2024. (Some countries' ecological demand did
-        not surpass Earth's ability to generate resources, which means they had
-        no Overshoot Day for 2024 and they are not plotted here)
-      </p>
-    </div>
+  <div class="text">
+    <h2>Country-Level Overshoot Patterns</h2>
+    <p>
+      This scatterplot reveals the relationship between a country's
+      biocapacity and ecological footprint, plotted according to each
+      country's Overshoot Day in 2024. (Some countries' ecological demand did
+      not surpass Earth's ability to generate resources, which means they had
+      no Overshoot Day for 2024 and they are not plotted here)
+    </p>
+  </div>
 
-    <div class="center_aligner">
-      <div class="embed-block">
-        <iframe
-          src="OvershootScatterplot.html"
-          title="Overshoot Scatterplot"
-        ></iframe>
-      </div>
+  <div class="center_aligner">
+    <div class="embed-block">
+      <iframe src="OvershootScatterplot.html" title="Overshoot Scatterplot"></iframe>
     </div>
+  </div>
 
-    <div class="scrolly-container">
-      <div class="leftside">
-        <div class="text progressive">
-          <h1>Total Ecological Footprint</h1>
-          <!-- <p>Biocapacity represents nature's ability to regenerate renewable resources and absorb waste, particularly
+  <div class="scrolly-container">
+    <div class="leftside">
+      <div class="text progressive">
+        <h1>Total Ecological Footprint</h1>
+        <!-- <p>Biocapacity represents nature's ability to regenerate renewable resources and absorb waste, particularly
           carbon dioxide. It's measured in global hectares per person and varies significantly by region based on
           productivity and land use.</p> -->
-        </div>
-
-        <div class="text progressive">
-          <h1>Ecological Deficits and Reserves</h1>
-          <p>
-            Countries with ecological reserves have more biocapacity than their
-            ecological footprint, while those with deficits consume more than
-            their ecosystems can regenerate.
-          </p>
-        </div>
-
-        <div class="text progressive end">
-          <h1>Calculating Overshoot Dates</h1>
-          <p>
-            Representing when a population would exhaust nature's budget for the
-            entire year if everyone lived like them.
-          </p>
-        </div>
       </div>
 
-      <div class="header sticky" id="dynamic_sticky1">
-        <div class="aligner">
-          <!-- <h1>Scroll to Explore</h1>
+      <div class="text progressive">
+        <h1>Ecological Deficits and Reserves</h1>
+        <p>
+          Countries with ecological reserves have more biocapacity than their
+          ecological footprint, while those with deficits consume more than
+          their ecosystems can regenerate.
+        </p>
+      </div>
+
+      <div class="text progressive end">
+        <h1>Calculating Overshoot Dates</h1>
+        <p>
+          Representing when a population would exhaust nature's budget for the
+          entire year if everyone lived like them.
+        </p>
+      </div>
+    </div>
+
+    <div class="header sticky" id="dynamic_sticky1">
+      <div class="aligner">
+        <!-- <h1>Scroll to Explore</h1>
         <h2>Interactive Content</h2> -->
-        </div>
       </div>
     </div>
+  </div>
 
-    <div class="text">
-      <h1>Dwindling Resources</h1>
-      <p></p>
+  <div class="text">
+    <h1>Dwindling Resources</h1>
+    <p></p>
+  </div>
+
+  <div class="center_aligner embed-block">
+    <img src="images/Earth Biocapacity Over Time(1).svg"
+      alt="Area chart of Earth's decreasing biocapacity from 1960-2025" />
+  </div>
+
+  <div class="text">
+    <h1>Overshoot Day As Paradigm</h1>
+    <p>
+      Earth Overshoot Day is a useful metric, offering a paradigm which centers us in relationship with
+      Earth's material budget. By placing us in a measurable position on the calendar, and with insights
+      country-by-country down to the individual level, it closes the gap between a subject and their surroundings. "The
+      environment" is no longer separated from the individual.
+    </p>
+
+    <p>
+      This point of view encourages us to think about resource consumption in terms of regenerative capacity, and
+      highlights the urgent need for systemic changes in how we produce, consume, and manage resources globally, while
+      placing each of us within the effort.
+    </p>
+  </div>
+
+  <div class="center_aligner">
+    <div class="embed-block">
+      <iframe src="Cartogram.html" title="Resource Cartogram"></iframe>
     </div>
+  </div>
 
-    <div class="center_aligner embed-block">
-      <img
-        src="images/Earth Biocapacity Over Time(1).svg"
-        alt="Area chart of Earth's decreasing biocapacity from 1960-2025"
-      />
-    </div>
+  <div class="text">
+    <h1>What Can We Do?</h1>
+    <p>
+      Some of The Footprint Network's proposed solutions range from personal
+      changes such as reduced meat consumption, car travel, and energy use, to
+      larger policy shifts like prioritizing renewable energy, land
+      protections, and economic reform. Through any and all actions, the goal
+      is to move the goalpost and push the Overshoot Date to earlier in the
+      calendar year.
+    </p>
+  </div>
 
-    <div class="text">
-      <h1>Overshoot Day As Paradigm</h1>
-      <p>
-        The concept of Earth Overshoot Day serves as more than just a
-        metric—it's a paradigm shift in how we understand our relationship with
-        planetary resources. By quantifying our ecological deficit, it provides
-        a clear framework for understanding sustainability challenges and
-        tracking progress toward solutions.
-      </p>
+  <div class="text">
+    <h2>Further Exploration</h2>
+    <p>
+      More ideas toward solutions can be explored at
+      <a href="https://www.overshootday.org/power-of-possibility/" target="_blank">overshootday.org</a>.
+    </p>
+  </div>
 
-      <p>
-        This paradigm encourages us to think about resource consumption in terms
-        of planetary boundaries and regenerative capacity, rather than simply
-        economic growth metrics. It highlights the urgent need for systemic
-        changes in how we produce, consume, and manage resources globally.
-      </p>
-    </div>
+  <footer style="text-align: center; padding: 2rem; background: #000; color: white">
+    <p>
+      <a href="https://www.footprintnetwork.org/" target="_blank" style="color: #4caf50">Global Footprint Network</a>.
+    </p>
+  </footer>
 
-    <div class="center_aligner">
-      <div class="embed-block">
-        <iframe src="Cartogram.html" title="Resource Cartogram"></iframe>
-      </div>
-    </div>
+  <script src="script.js"></script>
+</body>
 
-    <div class="text">
-      <h1>What Can We Do?</h1>
-      <p>
-        Some of The Footprint Network's proposed solutions range from personal
-        changes such as reduced meat consumption, car travel, and energy use, to
-        larger policy shifts like prioritizing renewable energy, land
-        protections, and economic reform. Through any and all actions, the goal
-        is to move the goalpost and push the Overshoot Date to earlier in the
-        calendar year.
-      </p>
-    </div>
-
-    <div class="text">
-      <h2>Further Exploration</h2>
-      <p>
-        More ideas toward solutions can be explored at
-        <a
-          href="https://www.overshootday.org/power-of-possibility/"
-          target="_blank"
-          >overshootday.org</a
-        >.
-      </p>
-    </div>
-
-    <footer
-      style="text-align: center; padding: 2rem; background: #000; color: white"
-    >
-      <p>
-        <a
-          href="https://www.footprintnetwork.org/"
-          target="_blank"
-          style="color: #4caf50"
-          >Global Footprint Network</a
-        >.
-      </p>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
 </html>
