@@ -7,10 +7,11 @@
 }
 
 html {
-  background-image: linear-gradient(#cceff1, #a0e9d3);
+  background-image: linear-gradient(#bdffff, #0ea7d6);
   margin: 0;
   padding: 0;
 }
+
 body {
   padding-top: 100px;
 }
