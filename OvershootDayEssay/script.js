@@ -95,32 +95,7 @@ function initNavigation() {
   observer.observe(mainTitle);
 }
 
-// Initialize Tableau embed with error handling
-function initTableau() {
-  const divElement = document.getElementById('viz1754056833444');
 
-  if (!divElement) {
-    console.warn('Tableau container not found');
-    return;
-  }
-
-  const vizElement = divElement.getElementsByTagName('object')[0];
-
-  if (vizElement) {
-    // Set responsive dimensions
-    vizElement.style.width = '100%';
-    vizElement.style.height = '100%';
-
-    // Load Tableau API
-    const scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    scriptElement.onerror = () => {
-      console.warn('Failed to load Tableau API');
-    };
-
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  }
-}
 
 // Smooth loading for iframes
 function initIframeLoading() {
@@ -152,23 +127,7 @@ function handleResize() {
   }, 100);
 }
 
-// Performance optimization: Intersection Observer for animations
-function initPerformanceOptimizations() {
-  // Lazy load non-critical content
-  const lazyElements = document.querySelectorAll('.embed-block');
 
-  const lazyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-      }
-    });
-  }, {
-    rootMargin: '50px'
-  });
-
-  lazyElements.forEach(el => lazyObserver.observe(el));
-}
 
 // Utility function for smooth scrolling to elements
 function scrollToElement(selector) {
@@ -198,10 +157,6 @@ function init() {
   safeExecute(initIframeLoading, 'Iframe Loading');
   safeExecute(initPerformanceOptimizations, 'Performance');
 
-  // Delayed initialization for external dependencies
-  setTimeout(() => {
-    safeExecute(initTableau, 'Tableau');
-  }, 1000);
 }
 
 // Event listeners
@@ -219,6 +174,6 @@ if (typeof window !== 'undefined') {
   window.scrollyUtils = {
     scrollToElement,
     updateStickyContent,
-    initTableau
+
   };
 }
