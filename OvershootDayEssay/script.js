@@ -155,7 +155,7 @@ function init() {
   safeExecute(initScrollers, 'Scrollers');
   safeExecute(initNavigation, 'Navigation');
   safeExecute(initIframeLoading, 'Iframe Loading');
-  safeExecute(initPerformanceOptimizations, 'Performance');
+
 
 }
 
