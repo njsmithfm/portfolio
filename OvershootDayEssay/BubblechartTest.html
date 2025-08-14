@@ -1,0 +1,217 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=scatter-life-expectancy-timeline&code=LYTwwgFghgTgLgOgM4QPYHcAyqoBMCWAdgOYAUAlANwBQAJAsQKZykBKA8uwCoD6ACgEEuACQAEAalEByAPS4ocKDKhIkzOQqUAbfADNGAWkYAPAA6MAxosIWQCAFZJUhKQBpRugK424-Z6NJ5RXJRAG9qUVFQSFhECHxcRmw8IjIqCNEtZlF8OEZgAGU4ECzRAF4wjMjUUygLXJAALlEABgQADgyAXxpIrLhRJHwAL0YAMW8rP0Jyj0nff1JjEPDIyIA3WFEQWYBZBQhkAEd4JdEZUQBWRnaQyTaARl61mGZPGBmdgCpRdpbnnoZGQXAoWCD5KCNDL9QZgiGzADaVTCokIUGAjGaUgAkjZUBi3DlCIljM0Wu48sY4FjAF1ygHF1QBspoBTRUJ3lyWMAcf6AYUUpKIuq5kaFUejMdJMHpGABRMyWay2QlEEnNB4UkzU6T0wD_2oBfFVZhHZ0kAgTq8_mC4UYrF8GqeLQKaYK4kmZoAJlVVKxgG4DGmAY-U9QapCaBWsUWiLdIwKhvHAYCAHUrRABmN3qqSAX7VAG3afpTJoyAF1njUFjMKqs1gAjFSMdimIvNUvB3wYnSEUX14OiKDGfBILggcxYiwKRjEVAxtzI4Oj_CMQgp9aMeD4QdacfttZQTxwVB8W1NUTRzyMINronzmBqZoHo8TtamXe4vIwTZaZoAdku5JvfUYunVhBtWjHmuMD4MQEDqp-J77jULqQSeZaoHAW7ALBQHtugCRwBAzSXJcaHBuCoHgc0_5aIBX6DCAwAIS-0iEM4jCriecIWAA1qYqBEHARQlK2FGRAhMCJDAADqmHYaIzoUaaUEWM40aoFoPFZHW_GDGg6AAHJqgAQnAhDNLoUBaGo-HtigGB8K86x6QZHjGWo0lmZEQSQqICK5jeMntr4cAqe5FFtmulLqq5CCNowzaMAiLS5s5awhQIOjEHZUgWDOj5MVBWS_liABsCYAKRZSeW6mFiuHFfFkQhcpfFQcGujyQUIyig8LQtGpXROYFakhVigAgKqmWraoAcHIAOIACJ8IAzoqAN8-gAo9oAG8olWuOUpuls4LqtPkwaI7XVfuap1apDVrE1s4iYwREpvRMDAMZO1rhd3GtbBXXSTecU3luim-OVlRQbUuAECQOHxYJwlibgWHKvFTX3Qoj6GfM0wBKgZb2Csakws-h6zBj9gIHjjDPFBwKiKYrxIdOMAGKBd2MGp1PvDMSBwg9CIJrm4VqhI0iAFj_vKSCTXO5vzUgADxljAAB8UhqWdwaSOz4Kcw8PMhRLQv86LGv86rEIIhrCBsgMkhSzL8uK0rkQqxzUAxZrfMWzrIvGYeTsGw7Tum_q5vSNLcsK7btv22rjvOs7VLa8Loii1HEtB_LZPtt1a7ecGxAgbgp2lXt7VwWucmzlARCYFAZaRZeMCHvF63NAmRftiBYEpg87Uh2nZnGAIXZIHnwV9qKUhaKgxBPeaI_0syk8PaS-0dUv8XAEQjcdfFoaMONUAA86eEUVv2CDrW0iryDWST1vXDHcU_lBe2L0taMyqdFBmfmXeuTii2g8nhZ6BDIOSZu_eKnZuwVyrrRB-jVRwPSQguLEoQSZdFELQLuGcvJmRAH3bsf8GzDyxCTK-IosSAGc9OkOo56dmVBvQ-Iob5UhOoDBqT83r7TfieD-wYkBfzgD_eqDUAFAJMiArhYD-6QOriwqCCN4HI2kMgj2jBUHGk-hnMy6xuyeGMvsAGSIoIwLWMI-yojDoEAxIQIYzhG6HRPsOKcjAB6iDCnJKM04kCHSIKwKAJBBFnTkmPGAzRSBeB8GjCgMilYUypswXwC56YpVHGI22mwYCiECaOJAiIpAAGJLgPDyu0AAnGWQkeT0qXAsFU8puTdBlgsAmS4r5antHqboNptS8qXGKbgdoAAWWp9T2iMDylAWpFhXyvmdO0dotTXztDyi0YpLRanFIeBYfp1SuklJaBWKQ-YbaRBZh8DJikskIBLifUgmTzzpFtl0cgFAPrvy-mZNQIEnHNAMSeIxNVCHSHZkjbaXi8iFDvqKXI-Q6rmM0M0MKHyPFO0OkgKiNFn6ijCVMRYz5sa2xOWzVqExwnOFIM-BEUd7kNXTlwt5N5fH4HgdMSa7w7TOAAKqmCCG1Ze9L9RMucJKFQqROXcqxEcTwXEly4nYJuDBfI0KFmmM4jy3RngIwCDCYsrRKColEJLFxmhwqMsikQRgCAsgkCwrqwg4hxB4rWEq5wCAKxqGrEWY1TYzUIDCqYTwKBAhGoilFBEhBcxUuqDWaYCAnVWIQH6gND9fL3woiYq88V-qGsUJ601LZQ3iwtvKyI3DBgLg8fgtYW94VBpNSGsNGaAVSCBQgmAk8oXgt4s0dtMKKKuWrdmxFTj83xVRdRRSGKUYkpmGS4yDqoIEsGES1GpLyWUtTsGGlG7kSPIBBkaI0B4DIGYO66YpBY3pB3UAA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript"
+    src="https://echarts.apache.org/en/js/vendors/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    var ROOT_PATH = 'https://echarts.apache.org/examples';
+    var option;
+
+    myChart.showLoading();
+    $.get(ROOT_PATH + '/data/asset/data/life-expectancy.json', function (data) {
+      myChart.hideLoading();
+      let itemStyle = {
+        opacity: 0.8
+      };
+      let sizeFunction = function (x) {
+        var y = Math.sqrt(x / 5e8) + 0.1;
+        return y * 80;
+      };
+      // Schema:
+      let schema = [
+        { name: 'Income', index: 0, text: '人均收入', unit: '美元' },
+        { name: 'LifeExpectancy', index: 1, text: '人均寿命', unit: '岁' },
+        { name: 'Population', index: 2, text: '总人口', unit: '' },
+        { name: 'Country', index: 3, text: '国家', unit: '' }
+      ];
+      option = {
+        baseOption: {
+          timeline: {
+            axisType: 'category',
+            orient: 'vertical',
+            autoPlay: true,
+            inverse: true,
+            playInterval: 750,
+            left: null,
+            right: 0,
+            top: 20,
+            bottom: 20,
+            width: 55,
+            height: null,
+            symbol: 'none',
+            checkpointStyle: {
+              borderWidth: 2
+            },
+            controlStyle: {
+              showNextBtn: false,
+              showPrevBtn: false
+            },
+            data: []
+          },
+          title: [
+            {
+              text: data.timeline[0],
+              textAlign: 'center',
+              left: '63%',
+              top: '55%',
+              textStyle: {
+                fontSize: 100
+              }
+            },
+            {
+              text: '各国人均寿命与GDP关系演变',
+              left: 'center',
+              top: 10,
+              textStyle: {
+                fontWeight: 'normal',
+                fontSize: 20
+              }
+            }
+          ],
+          tooltip: {
+            padding: 5,
+            borderWidth: 1,
+            formatter: function (obj) {
+              let value = obj.value;
+              // prettier-ignore
+              return schema[3].text + '：' + value[3] + '<br>'
+                + schema[1].text + '：' + value[1] + schema[1].unit + '<br>'
+                + schema[0].text + '：' + value[0] + schema[0].unit + '<br>'
+                + schema[2].text + '：' + value[2] + '<br>';
+            }
+          },
+          grid: {
+            top: 100,
+            containLabel: true,
+            left: 30,
+            right: '110'
+          },
+          xAxis: {
+            type: 'log',
+            name: '人均收入',
+            max: 100000,
+            min: 300,
+            nameGap: 25,
+            nameLocation: 'middle',
+            nameTextStyle: {
+              fontSize: 18
+            },
+            splitLine: {
+              show: false
+            },
+            axisLabel: {
+              formatter: '{value} $'
+            }
+          },
+          yAxis: {
+            type: 'value',
+            name: '平均寿命',
+            max: 100,
+            nameTextStyle: {
+              fontSize: 18
+            },
+            splitLine: {
+              show: false
+            },
+            axisLabel: {
+              formatter: '{value} 岁'
+            }
+          },
+          visualMap: [
+            {
+              show: false,
+              dimension: 3,
+              categories: data.counties,
+              inRange: {
+                color: (function () {
+                  // prettier-ignore
+                  var colors = ['#51689b', '#ce5c5c', '#fbc357', '#8fbf8f', '#659d84', '#fb8e6a', '#c77288', '#786090', '#91c4c5', '#6890ba'];
+                  return colors.concat(colors);
+                })()
+              }
+            }
+          ],
+          series: [
+            {
+              type: 'scatter',
+              itemStyle: itemStyle,
+              data: data.series[0],
+              symbolSize: function (val) {
+                return sizeFunction(val[2]);
+              }
+            }
+          ],
+          animationDurationUpdate: 1000,
+          animationEasingUpdate: 'quinticInOut'
+        },
+        options: []
+      };
+      for (let n = 0; n < data.timeline.length; n++) {
+        option.baseOption.timeline.data.push(data.timeline[n]);
+        option.options.push({
+          title: {
+            show: true,
+            text: data.timeline[n] + ''
+          },
+          series: {
+            name: data.timeline[n],
+            type: 'scatter',
+            itemStyle: itemStyle,
+            data: data.series[n],
+            symbolSize: function (val) {
+              return sizeFunction(val[2]);
+            }
+          }
+        });
+      }
+      myChart.setOption(option);
+    });
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+
+</html>
