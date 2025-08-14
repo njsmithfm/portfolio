@@ -1,1 +1,1 @@
-# portfolio for NJ Smith, information designer
+portfolio for NJ Smith, information designer

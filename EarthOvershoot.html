@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Earth Overshoot Day 2024</title>
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="OvershootDayEssay/stylesheet.css" />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
 
@@ -100,7 +100,7 @@
 
   <div class="center_aligner">
     <div class="embed-block">
-      <iframe src="OvershootScatterplot.html" title="Overshoot Scatterplot"></iframe>
+      <iframe src="OvershootDayEssay/OvershootScatterplot.html" title="Overshoot Scatterplot"></iframe>
     </div>
   </div>
 
@@ -136,18 +136,25 @@
     </div>
   </div>
 
-  <!-- <div class="text">
-    <h1>Dwindling Resources</h1>
-    <p></p>
-  </div> -->
+  <div class="text">
+    <h1>Resources In Decline</h1>
+    <p>Earth's biocapacity is made up of different types of land or water, measured in global hectares which are
+      "biologically
+      productive hectare[s] with world-average productivity." Footprint Network divides this into <a
+        href="https://www.footprintnetwork.org/resources/glossary/#land-area-type" target="_blank">5 categories of
+        productive renewable area</a>: Grazing Land, Forest Products,
+      Fishing Grounds, Cropland, and Built-Up Land, which together yield the Earth's total biocapacity. Below we
+      see each of these area types gradually decreasing each year since Footprint Network began tracking the data, in
+      1961. The area chart below shows Earth's resoureces in hectares available on a per-person basis, in constant
+      decline over the past several decades.</p>
+  </div>
 
 
-  <!-- TODO: remake the following area chart in D3 -->
 
-  <!-- <div class="center_aligner embed-block">
-    <img src="images/Earth Biocapacity Over Time(1).svg"
-      alt="Area chart of Earth's decreasing biocapacity from 1960-2025" />
-  </div> -->
+  <div class="center_aligner embed-block">
+    <object data="OvershootDayEssay/EchartsBiocapacityOverTime.html" type="text/html" width="1200px"
+      height="800px margin:20px"></object>
+  </div>
 
   <div class="text">
     <h1>Overshoot Day As Paradigm</h1>
@@ -167,7 +174,7 @@
 
   <div class="center_aligner">
     <div class="embed-block">
-      <iframe src="Cartogram.html" title="Resource Cartogram"></iframe>
+      <iframe src="OvershootDayEssay/Cartogram.html" title="Resource Cartogram"></iframe>
     </div>
   </div>
 
@@ -201,7 +208,7 @@
   <script src="https://unpkg.com/intersection-observer"></script>
   <script src="https://unpkg.com/scrollama"></script>
 
-  <script src="script.js"></script>
+  <script src="OvershootDayEssay/script.js"></script>
 </body>
 
 </html>
